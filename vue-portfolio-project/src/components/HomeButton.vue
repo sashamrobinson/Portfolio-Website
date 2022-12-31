@@ -1,6 +1,6 @@
 <template>
     <div>
-        <router-link to="/" id="homeButton">SASHA ROBINSON</router-link>
+        <router-link to="/" id="homeButton">HOME</router-link>
     </div>
 </template>
 

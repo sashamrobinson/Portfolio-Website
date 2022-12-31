@@ -1,20 +1,15 @@
-<template>
-  <!-- <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>-->
+<template id="scroll">
   <div class="container">
-    <router-view/>
+    <router-view id="test"/>
   </div>
 </template>
 
 <script>
-import Header from './components/Header'
 
 export default {
   name: 'App',
   components: {
-    Header
+    
   },
   data() {
     return {
@@ -25,5 +20,13 @@ export default {
 </script>
 
 <style>
-
+#scroll {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  max-width: 100%;
+  max-height: 100%; 
+}
+.container {
+  overflow-y: scroll;
+}
 </style>

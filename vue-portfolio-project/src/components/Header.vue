@@ -1,14 +1,16 @@
 <template>
-    <header>
-        <div>
-            <HomeButton class="align homeButton"/>
-        </div>
-        <div>
-            <MenuButton class="align menuButton"/>
-            <MenuButtonIcon class="align menuButton" />
-        </div>
-    </header>
-    <hr>
+    <div id="static">
+        <header>
+            <div>
+                <HomeButton class="align homeButton"/>
+            </div>
+            <div>
+                <MenuButton class="align menuButton"/>
+                <MenuButtonIcon class="align menuButton" />
+            </div>
+        </header>
+        <hr>
+    </div>
 </template>
 
 <script>
@@ -27,10 +29,14 @@ export default {
 </script>
 
 <style>
+#static {
+    position: sticky;
+    top: 0;
+}
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;   
+    align-items: center; 
 }
 
 hr {

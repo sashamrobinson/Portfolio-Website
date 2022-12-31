@@ -1,44 +1,71 @@
 <template>
-  <div class="container">
-    <!-- <Header /> -->
-    <div id="bg">
+  <div id="container">
+    <div class="bg-painting">
       <Header />
+      <Intro />
+    </div>
+    <div class="bg-solid">
+
     </div>
   </div>
 </template>
 
 <script>
 import Header from '../components/Header'
-
+import Intro from '../components/Intro'
 export default {
   name: 'HomeView',
   components: {
-    Header
+    Header,
+    Intro
+  },
+  mounted() {
+    window.addEventListener('scroll', () => {
+      var scrollPos = window.scrollY;
+      var imageHeight = this.$el.querySelector('.bg-solid').clientHeight
+      var fadeEnd = imageHeight + imageHeight / 2
+
+      if (scrollPos > fadeEnd) {
+        this.$el.querySelector('bg-solid').style.opacity = 0
+      }
+      else {
+        var opacity = 1 - scrollPos / fadeEnd
+        this.$el.querySelector('bg-solid').style.opacity = opacity
+      }
+    })
+  },
+  methods: {
+
   }
 }
+
 </script>
 
 <style>
-body, html {
-  height: 100%;
-  margin: 0;
+#container {
+  overflow-y: hidden;
 }
 
-#bg {
-  /* The image used */
-  background-image: url("../assets/biblical_painting_background.png");
+.bg-painting {
+  background-image: url("../assets/renaissance_painting.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
-
-  /* Full height */
-  height: 100%;
+  height: 125%;
   top: 0;
   left: 0;
   right: 0;
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-
+.bg-solid {
+  background-color: black;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 10em;
+  left: 0;
+  right: 0;
+  
+}
 </style>
