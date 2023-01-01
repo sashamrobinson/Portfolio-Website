@@ -5,8 +5,7 @@
                 <HomeButton class="align homeButton"/>
             </div>
             <div>
-                <MenuButton class="align menuButton"/>
-                <MenuButtonIcon class="align menuButton" />
+                <Menu class="align menuButton"/>
             </div>
         </header>
         <hr>
@@ -15,15 +14,13 @@
 
 <script>
 import HomeButton from './HomeButton'
-import MenuButton from './MenuButton'
-import MenuButtonIcon from './MenuButtonIcon'
+import Menu from './Menu'
 
 export default {
     name: 'Header',
     components: {
         HomeButton,
-        MenuButton,
-        MenuButtonIcon
+        Menu
     }
 }
 </script>

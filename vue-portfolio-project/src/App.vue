@@ -1,5 +1,5 @@
 <template id="scroll">
-  <div class="container">
+  <div>
     <router-view id="test"/>
   </div>
 </template>
@@ -20,13 +20,15 @@ export default {
 </script>
 
 <style>
-#scroll {
-  overflow-y: hidden;
-  overflow-x: hidden;
-  max-width: 100%;
-  max-height: 100%; 
+body {
+  overscroll-behavior-y: none;
+  padding: 0;
+  margin: 0;
+  
 }
+
 .container {
   overflow-y: scroll;
 }
+
 </style>

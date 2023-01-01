@@ -27,8 +27,8 @@ h1 {
     font-size: 5em;
     letter-spacing: 0.15em;
     color: white;
-    text-shadow: 0px 4px 4px
-        rgba(0,0,0,0.25);
+    /* text-shadow: 0px 4px 4px
+        rgba(0,0,0,0.25); */
     margin-block: 0 0;
 }
 
@@ -40,8 +40,8 @@ h2 {
     letter-spacing: 0.1em;
     margin-block: 0 0;
     color: white;
-    text-shadow: 0px 4px 4px
-        rgba(0,0,0,0.25);
+    /* text-shadow: 0px 4px 4px
+        rgba(0,0,0,0.25); */
     
 }
 
