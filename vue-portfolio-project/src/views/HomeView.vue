@@ -111,7 +111,7 @@ export default {
   right: 0;
 }
 .bg-solid {
-  background-color: #4B4B4B;
+  background-color: #868b8b;
   height: 150em;
   width: 100%;
   

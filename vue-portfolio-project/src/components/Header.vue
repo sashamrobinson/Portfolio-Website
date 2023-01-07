@@ -29,6 +29,7 @@ export default {
 #static {
     position: sticky;
     top: 0;
+    backdrop-filter: blur(5px);
 }
 header {
     display: flex;
